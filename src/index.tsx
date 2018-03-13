@@ -1,9 +1,17 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
+import { Provider } from 'react-redux'
+import { createBrowserHistory } from 'history'
 
-import { Hello } from './components/Hello'
+import { AppContainer } from './containers/App'
+import { configureStore } from './store/configureStore'
+
+const history = createBrowserHistory()
+const store = configureStore(history)
 
 ReactDOM.render(
-    <Hello compiler='TypeScript' framework='React' />,
+    <Provider store={store}>
+        <AppContainer />
+    </Provider>,
     document.getElementById('example')
 )
