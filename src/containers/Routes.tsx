@@ -10,7 +10,7 @@ export class Routes extends React.Component {
 				<Switch>
 					<Route
 						exact={true}
-						path='/'
+						path="/"
 						component={AppContainer}
 					/>
 				</Switch>
