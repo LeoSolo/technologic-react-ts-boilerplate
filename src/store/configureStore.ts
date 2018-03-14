@@ -17,9 +17,9 @@ export function configureStore(history: History): Store<StoreState> {
 
     if (module.hot) {
         module.hot.accept(() => {
-			store.replaceReducer(require('../reducers').reducers)
-		})
-	}
+            store.replaceReducer(require('../reducers').reducers)
+        })
+    }
 
-	return store
+    return store
 }
