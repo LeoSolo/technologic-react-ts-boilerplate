@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack",
-    "webpack:dev": "webpack --mode=development",
+    "start": "webpack-dev-server --mode=development",
+    "webpack:dev": "webpack --mode=develnpmopment",
     "webpack:prod": "webpack --mode=production"
   },
   "author": "",
@@ -38,6 +38,7 @@
     "tslint-react": "^3.5.1",
     "typescript": "^2.7.2",
     "webpack": "^4.1.1",
-    "webpack-cli": "^2.0.11"
+    "webpack-cli": "^2.0.11",
+    "webpack-dev-server": "^3.1.1"
   }
 }
