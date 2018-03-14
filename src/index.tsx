@@ -5,7 +5,6 @@ import { createBrowserHistory } from 'history'
 import { ConnectedRouter } from 'react-router-redux'
 import { Routes } from './containers/Routes'
 
-import { AppContainer } from './containers/App'
 import { configureStore } from './store/configureStore'
 
 const history = createBrowserHistory()
