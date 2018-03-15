@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import { createBrowserHistory } from 'history'
 import { ConnectedRouter } from 'react-router-redux'
 import { Routes } from './containers/Routes'
+import './scss/base.scss'
 
 import { configureStore } from './store/configureStore'
 
