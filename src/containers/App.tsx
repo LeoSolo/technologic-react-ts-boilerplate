@@ -6,7 +6,7 @@ import { RouterState } from 'react-router-redux'
 import { StoreState } from '../reducers'
 import { ApplicationState } from '../reducers/application'
 import { Hello } from '../components/Hello'
-import { setLoading, SetLoadingAction, ApplicationActions} from '../actions/application'
+import { setLoading, SetLoadingAction, ApplicationActions } from '../actions/application'
 
 interface AppProps {
 	application: ApplicationState
