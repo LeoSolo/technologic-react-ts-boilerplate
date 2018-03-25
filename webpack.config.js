@@ -1,5 +1,6 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
+const webpack = require('webpack');
 
 module.exports = {
   entry: [
@@ -43,9 +44,16 @@ module.exports = {
   },
 
   devServer: {
-    contentBase: path.resolve('dist')
+    contentBase: path.resolve('dist'),
+    hot: false
   },
   plugins: [
-    new ExtractTextPlugin('style.css')
+      new ExtractTextPlugin('style.css'),
+      new webpack.NamedModulesPlugin(),
+      new webpack.HotModuleReplacementPlugin(),
+      new webpack.NoEmitOnErrorsPlugin(),
+      new webpack.DefinePlugin({
+          'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
+      })
   ]
 };
