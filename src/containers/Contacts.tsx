@@ -7,13 +7,13 @@ import { StoreState } from '../reducers'
 import { ApplicationState } from '../reducers/application'
 import { setLoading, SetLoadingAction, ApplicationActions } from '../actions/application'
 
-interface AppProps {
+interface ContactsProps {
 	application: ApplicationState
 	routing: RouterState
 	setLoading: (isLoading: boolean) => SetLoadingAction
 }
 
-export class App extends React.Component<AppProps, {}> {
+export class Contacts extends React.Component<ContactsProps, {}> {
 
 	constructor(props) {
 		super(props)
@@ -45,7 +45,7 @@ function mapDispatchToProps(dispatch: Dispatch<ApplicationActions>) {
 	)
 }
 
-export const AppContainer = connect(
+export const ContactsContainer = connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(App)
+)(Contacts)

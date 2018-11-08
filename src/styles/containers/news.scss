@@ -1,0 +1,38 @@
+.news-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  padding: 24px;
+  li {
+    position: relative;
+    width: 100%;
+    height: $newsHeight;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 24px;
+    overflow: hidden;
+    div.img {
+      position: relative;
+      width: $newsHeight;
+      height: $newsHeight;
+      background: aqua;
+    }
+    div.content {
+      position: relative;
+      width: 100%;
+      height: $newsHeight;
+      padding-left: 10px;
+      h3 {
+        margin: 0 0 10px 0;
+        height: 15%;
+      }
+      p {
+        margin: 0;
+        height: 85%;
+      }
+    }
+  }
+}

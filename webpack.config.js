@@ -1,6 +1,7 @@
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const path = require('path');
 const webpack = require('webpack');
+const HtmlWepackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   entry: [
@@ -54,6 +55,9 @@ module.exports = {
       new webpack.NoEmitOnErrorsPlugin(),
       new webpack.DefinePlugin({
           'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'development')
+      }),
+      new HtmlWepackPlugin({
+          template: path.resolve('src', 'index.html')
       })
   ]
 };
